@@ -1,14 +1,15 @@
 const router = require('express').Router();
 const axios = require('axios');
 
-// The base path '/api/asteroids' is already defined in server.js
-router.get('/feed', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const { start_date, end_date } = req.query;
+    const today = new Date().toISOString().split('T')[0];
+    
     const params = {
       api_key: process.env.NASA_API_KEY || 'DEMO_KEY',
-      start_date: start_date,
-      end_date: end_date
+      start_date: start_date || today,
+      end_date: end_date || today
     };
     
     const response = await axios.get(

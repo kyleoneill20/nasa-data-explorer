@@ -1,17 +1,19 @@
 const router = require('express').Router();
 const axios = require('axios');
 
-// The base path '/api/mars-photos' is already defined in server.js
-router.get('/:rover/photos', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const { rover } = req.params;
-    const { sol, page = 1 } = req.query;
+    const { rover = 'curiosity', sol = 1000, camera, page = 1 } = req.query;
     
     const params = {
       api_key: process.env.NASA_API_KEY || 'DEMO_KEY',
-      sol: sol || 1000,
+      sol: sol,
       page: page
     };
+    
+    if (camera) {
+      params.camera = camera;
+    }
     
     const response = await axios.get(
       `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos`,
