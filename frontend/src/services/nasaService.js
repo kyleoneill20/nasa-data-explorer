@@ -11,7 +11,7 @@ const api = axios.create({
 export const getAPOD = async (date) => {
   try {
     const params = date ? { date } : {};
-    const response = await api.get('/apod', { params });
+    const response = await api.get('/api/apod', { params });
     return response.data; // Return just the data, not the full response
   } catch (error) {
     console.error('APOD API Error:', error);
@@ -19,13 +19,13 @@ export const getAPOD = async (date) => {
   }
 };
 
-// Updated to match the original Mars Photos component
-export const getMarsPhotos = async (rover, sol, camera) => {
+// Updated to match backend route structure
+export const getMarsPhotos = async (rover = 'curiosity', sol, camera) => {
   try {
-    const params = { sol };
+    const params = { rover, sol };
     if (camera) params.camera = camera;
     
-    const response = await api.get(`/mars-photos/${rover}/photos`, { params });
+    const response = await api.get('/api/mars-photos', { params });
     return response.data; // Return just the data
   } catch (error) {
     console.error('Mars Photos API Error:', error);
@@ -35,7 +35,7 @@ export const getMarsPhotos = async (rover, sol, camera) => {
 
 export const getMarsManifest = async (rover) => {
   try {
-    const response = await api.get(`/mars-photos/${rover}/manifest`);
+    const response = await api.get('/api/mars-photos', { params: { rover } });
     return response.data; // Return just the data
   } catch (error) {
     console.error('Mars Manifest API Error:', error);
@@ -45,7 +45,7 @@ export const getMarsManifest = async (rover) => {
 
 export const getAsteroids = async (startDate, endDate) => {
   try {
-    const response = await api.get('/asteroids/feed', {
+    const response = await api.get('/api/asteroids', {
       params: {
         start_date: startDate,
         end_date: endDate
@@ -60,7 +60,7 @@ export const getAsteroids = async (startDate, endDate) => {
 
 export const getTodayAsteroids = async () => {
   try {
-    const response = await api.get('/asteroids/today');
+    const response = await api.get('/api/asteroids');
     return response.data; // Return just the data
   } catch (error) {
     console.error('Today Asteroids API Error:', error);
