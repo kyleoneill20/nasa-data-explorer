@@ -1,0 +1,262 @@
+.data-dashboard {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .dashboard-header h2 {
+    color: white;
+    font-size: 2.5em;
+    margin: 0;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .tab-buttons button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+  }
+  
+  .tab-buttons button:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .tab-buttons button.active {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+  }
+  
+  .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .chart-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .chart-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #4facfe);
+    border-radius: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .chart-container:hover::before {
+    opacity: 0.3;
+  }
+  
+  .chart-container h3 {
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Specific chart styles */
+  .radar-chart {
+    grid-column: span 1;
+  }
+  
+  .doughnut-chart {
+    grid-column: span 1;
+  }
+  
+  .line-chart {
+    grid-column: span 2;
+  }
+  
+  .bar-chart {
+    grid-column: span 2;
+  }
+  
+  .polar-chart {
+    grid-column: span 1;
+  }
+  
+  /* Canvas styling */
+  .chart-container canvas {
+    max-height: 400px;
+  }
+  
+  /* Loading state */
+  .chart-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .chart-loading::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1024px) {
+    .charts-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .line-chart,
+    .bar-chart {
+      grid-column: span 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .dashboard-header h2 {
+      font-size: 2em;
+    }
+    
+    .tab-buttons {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .chart-container {
+      padding: 20px;
+    }
+    
+    .chart-container h3 {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Dark mode enhancement */
+  .data-dashboard {
+    color: white;
+  }
+  
+  /* Chart tooltip customization */
+  .chartjs-tooltip {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  
+  /* Animation for tab switching */
+  .charts-grid > * {
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Hover effects */
+  .chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+  }
+  
+  /* Empty state */
+  .no-data {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .no-data h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Export button (if you add one) */
+  .export-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+  }
+  
+  .export-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
