@@ -180,20 +180,6 @@ Set the build command: `npm install`
 Set the start command: `npm start`
 Add environment variables in the Render dashboard
 
-Known Issues
-Git Submodule: The frontend folder may appear as a submodule on GitHub. To fix:
-Sometimes Astronomy picture of the day can be delayed due to nasa not updating it in time for the next day.
-
-```
-rm -rf frontend/.git
-git add frontend
-git commit -m "Fix frontend submodule issue"
-API Rate Limiting: NASA APIs have rate limits. Consider implementing caching for production use.
-```
-API Rate Limiting: NASA APIs have rate limits. Consider implementing caching for production use.
-
-
-
 Licence
 This project is licenced under the MIT Licence.
 
