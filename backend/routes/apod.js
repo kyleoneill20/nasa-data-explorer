@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require('axios');
 
-// Note: Don't include '/apod' here - it's already defined in server.js
+
 router.get('/', async (req, res) => {
   try {
     const { date } = req.query;

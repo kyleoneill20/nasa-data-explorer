@@ -30,7 +30,7 @@ export const nasaAPI = {
     }
   },
 
-  // Fetch Near-Earth Asteroids
+  // Fetch Near Earth Asteroids
   getAsteroids: async (startDate, endDate) => {
     try {
       const url = `${API_BASE_URL}/asteroids/feed?start_date=${startDate}&end_date=${endDate}`;

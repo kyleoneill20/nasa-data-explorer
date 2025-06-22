@@ -1,4 +1,4 @@
-require('dotenv').config(); // THIS MUST BE THE VERY FIRST LINE
+require('dotenv').config();
 console.log('NASA API Key loaded:', process.env.NASA_API_KEY);
 
 const express = require('express');
