@@ -1,7 +1,7 @@
 const API_BASE_URL = 'http://localhost:5001/api';
 
 export const nasaAPI = {
-  // Fetch Astronomy Picture of the Day
+  
   getAPOD: async (date) => {
     try {
       const url = date 
@@ -16,7 +16,7 @@ export const nasaAPI = {
     }
   },
 
-  // Fetch Mars Rover Photos
+  
   getMarsPhotos: async (rover, sol = 1000, camera = null) => {
     try {
       let url = `${API_BASE_URL}/mars-photos/${rover}/photos?sol=${sol}`;
@@ -30,7 +30,7 @@ export const nasaAPI = {
     }
   },
 
-  // Fetch Near Earth Asteroids
+  
   getAsteroids: async (startDate, endDate) => {
     try {
       const url = `${API_BASE_URL}/asteroids/feed?start_date=${startDate}&end_date=${endDate}`;
