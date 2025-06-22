@@ -86,7 +86,7 @@ Git
 Installation
 Clone the repository:
 ```
-git clone https://github.com/yourusername/nasa-data-explorer.git
+git clone https://github.com/kyleoneill20/nasa-data-explorer.git
 cd nasa-data-explorer
 ```
 Install backend dependencies:
