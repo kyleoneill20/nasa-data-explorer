@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-// NASA API Configuration
+
 const NASA_API_KEY = 'mie3qopgrVZ3LwcM9LocDVdXSXeQnUnIH2W7SVS0';
 const NASA_BASE_URL = 'https://api.nasa.gov';
 
-// Create axios instance for NASA API
+
 const nasaApi = axios.create({
   baseURL: NASA_BASE_URL,
   timeout: 30000,
@@ -13,17 +13,17 @@ const nasaApi = axios.create({
   }
 });
 
-// Helper function to format dates
+
 const formatDate = (date) => {
   return date instanceof Date ? date.toISOString().split('T')[0] : date;
 };
 
-// Get today's date in YYYY-MM-DD format
+
 const getTodayDate = () => {
   return new Date().toISOString().split('T')[0];
 };
 
-// Get date 7 days ago
+
 const getWeekAgoDate = () => {
   const date = new Date();
   date.setDate(date.getDate() - 7);
@@ -102,7 +102,6 @@ export const getTodayAsteroids = async () => {
   }
 };
 
-// Export the nasaService object for backward compatibility
 export const nasaService = {
   getAPOD,
   getMarsPhotos,
