@@ -90,13 +90,11 @@ git clone https://github.com/yourusername/nasa-data-explorer.git
 cd nasa-data-explorer
 ```
 Install backend dependencies:
-BASH
 ```
 cd backend
 npm install
 ```
 Install frontend dependencies:
-BASH
 ```
 cd ../frontend
 npm install
@@ -104,13 +102,11 @@ npm install
 Running the Application
 Development Mode
 Start the backend server (runs on port 5001):
-BASH
 ```
 cd backend
 npm start
 ```
 In a new terminal, start the frontend development server (runs on port 3000):
-BASH
 ```
 cd frontend
 npm start
@@ -119,7 +115,6 @@ Open your browser and navigate to http://localhost:3000
 Production Build
 To create a production build of the frontend:
 
-BASH
 ```
 cd frontend
 npm run build
@@ -189,7 +184,6 @@ Known Issues
 Git Submodule: The frontend folder may appear as a submodule on GitHub. To fix:
 Sometimes Astronomy picture of the day can be delayed due to nasa not updating it in time for the next day.
 
-BASH
 ```
 rm -rf frontend/.git
 git add frontend
