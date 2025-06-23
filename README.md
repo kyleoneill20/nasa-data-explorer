@@ -2,33 +2,31 @@ NASA Data Explorer
 
 A full-stack web application that brings the wonders of space to your browser through NASA's public APIs. This project features a polished, space-themed interface with interactive data visualisations, allowing users to explore astronomy pictures, Mars rover photographs, and near-Earth asteroid information.
 
-Table of Contents:
+##Table of Contents:
 
-Overview
+#Overview
 
-Features
+#Features
 
-Technical Stack
+#Technical Stack
 
-Prerequisites
+#Prerequisites
 
-Installation
+#Installation
 
-Running the Application
+#Running the Application
 
-Project Structure
+#Project Structure
 
-API Endpoints
+#API Endpoints
 
-Environment Variables
+#Environment Variables
 
-Deployment
+#Deployment
 
-Future Enhancements
+#Contributing
 
-Contributing
-
-Licence
+#Licence
 
 Overview:
 
