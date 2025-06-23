@@ -13,14 +13,13 @@ A full-stack web application that brings the wonders of space to your browser th
 - [API Endpoints](#api-endpoints)
 - [Environment Variables](#environment-variables)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
 - [Licence](#licence)
 
-Overview:
+## Overview:
 
 The NASA Data Explorer is a comprehensive web application built as part of a software engineering challenge. It demonstrates proficiency in modern web development by integrating multiple NASA APIs into an engaging user experience. The application features a React frontend with advanced data visualisations and a Node.js/Express backend that serves as an intermediary between the client and NASA's services.
 
-Features:
+## Features:
 
 Core Functionality
 
@@ -82,7 +81,7 @@ Font Awesome icons throughout
 
 Loading states and error handling
 
-Technical Stack:
+## Technical Stack:
 
 Frontend:
 
@@ -122,7 +121,7 @@ Mars Rover Photos
 
 Near Earth Object Web Service (NeoWs)
 
-Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -130,7 +129,7 @@ Node.js (v14.0.0 or later)
 npm (v6.0.0 or later)
 
 Git
-Installation
+## Installation
 
 Clone the repository:
 ```
@@ -147,7 +146,8 @@ Install frontend dependencies:
 cd ../frontend
 npm install
 ```
-Running the Application
+## Running the Application
+
 Development Mode
 Start the backend server (runs on port 5001):
 ```
@@ -167,7 +167,8 @@ To create a production build of the frontend:
 cd frontend
 npm run build
 ```
-Project Structure
+## Project Structure
+
 ```
 nasa-data-explorer/
 ├── backend/
@@ -197,7 +198,8 @@ nasa-data-explorer/
 │   └── package.json           # Frontend dependencies
 └── README.md
 ```
-API Endpoints
+## API Endpoints
+
 Backend Endpoints
 `GET /api/apod` - Fetch Astronomy Picture of the Day
 Query parameters: `date` (YYYY-MM-DD format)
@@ -205,7 +207,8 @@ Query parameters: `date` (YYYY-MM-DD format)
 Query parameters: `sol` (Martian day), `camera` (optional)
 `GET /api/asteroids` - Fetch near-Earth asteroid data
 Query parameters: `start_date`, `end_date` (YYYY-MM-DD format)
-Environment Variables
+## Environment Variables
+
 Create a `.env` file in the backend directory with the following variables:
 ```
 NASA_API_KEY=your_nasa_api_key_here
@@ -216,7 +219,9 @@ To obtain a NASA API key:
 Visit https://api.nasa.gov/
 Register for a free API key
 Replace `your_nasa_api_key_here` with your actual key
-Deployment
+
+## Deployment
+
 Frontend (Vercel)
 Install Vercel CLI: `npm i -g vercel`
 Run `vercel` in the frontend directory
@@ -228,7 +233,7 @@ Set the build command: `npm install`
 Set the start command: `npm start`
 Add environment variables in the Render dashboard
 
-Licence
+## Licence
 This project is licenced under the MIT Licence.
 
 Built by Kyle O'Neill | Powered by NASA Open API
