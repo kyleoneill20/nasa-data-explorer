@@ -3,81 +3,141 @@ NASA Data Explorer
 A full-stack web application that brings the wonders of space to your browser through NASA's public APIs. This project features a polished, space-themed interface with interactive data visualisations, allowing users to explore astronomy pictures, Mars rover photographs, and near-Earth asteroid information.
 
 Table of Contents
+
 Overview
+
 Features
+
 Technical Stack
+
 Prerequisites
+
 Installation
+
 Running the Application
+
 Project Structure
+
 API Endpoints
+
 Environment Variables
+
 Deployment
-Known Issues
+
 Future Enhancements
+
 Contributing
+
 Licence
 
 Overview
+
 The NASA Data Explorer is a comprehensive web application built as part of a software engineering challenge. It demonstrates proficiency in modern web development by integrating multiple NASA APIs into an engaging user experience. The application features a React frontend with advanced data visualisations and a Node.js/Express backend that serves as an intermediary between the client and NASA's services.
 
 Features
+
 Core Functionality
+
 Astronomy Picture of the Day (APOD)
 
 Daily astronomical images with detailed descriptions
+
 Date navigation to explore historical images
+
 Automatic fallback for days when images are not yet available
+
 Mars Rover Photographs
 
 Browse images from NASA's Mars rovers
+
 Filter by Martian sol (day) using an interactive slider
+
 Camera selection for different perspectives
+
 Near-Earth Asteroids Tracker
 
 Real-time data on asteroids approaching Earth
+
 Hazard assessment and tracking
+
 Detailed information including size, velocity, and approach distance
-Data Visualisations
-Animated Statistics Dashboard
+
+Data Visualisations (botton of home page) 
+
+Animated Statistics Dashboard (bottom of home page)
 
 Six key metrics with smooth animations
+
 Real-time counting effects using CountUp library
+
 Responsive grid layout
+
 Interactive Charts
 
 Asteroid size distribution (doughnut chart)
+
 Hazard timeline tracking (line chart)
+
 Mars camera usage statistics (bar chart)
+
 Comprehensive space data overview (radar chart)
+
 User Experience
+
 Glass morphism design aesthetic
+
 Animated starfield backgrounds
+
 Smooth page transitions
+
 Fully responsive layout for all devices
+
 Font Awesome icons throughout
+
 Loading states and error handling
-Technical Stack
+
+Technical Stack:
+
 Frontend
+
 React (17.0.2) - Component-based UI library
+
 React Router (6.x) - Client-side routing
+
 Axios - HTTP client for API requests
+
 Chart.js & react-chartjs-2 - Data visualisation
+
 Font Awesome - Icon library
+
 CountUp - Number animation library
+
 CSS3 - Styling with animations and transitions
-Backend
+
+Backend:
+
 Node.js - JavaScript runtime
+
 Express (4.x) - Web application framework
+
 Axios - HTTP client for NASA API requests
+
 CORS - Cross-origin resource sharing
+
 dotenv - Environment variable management
-APIs
+
+APIs:
+
 NASA Open APIs
+
 Astronomy Picture of the Day (APOD)
+
 Mars Rover Photos
+
 Near Earth Object Web Service (NeoWs)
+
 Prerequisites
+
 Before you begin, ensure you have the following installed:
 
 Node.js (v14.0.0 or later)
