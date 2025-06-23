@@ -2,7 +2,7 @@ NASA Data Explorer
 
 A full-stack web application that brings the wonders of space to your browser through NASA's public APIs. This project features a polished, space-themed interface with interactive data visualisations, allowing users to explore astronomy pictures, Mars rover photographs, and near-Earth asteroid information.
 
-Table of Contents
+Table of Contents:
 
 Overview
 
@@ -30,11 +30,11 @@ Contributing
 
 Licence
 
-Overview
+Overview:
 
 The NASA Data Explorer is a comprehensive web application built as part of a software engineering challenge. It demonstrates proficiency in modern web development by integrating multiple NASA APIs into an engaging user experience. The application features a React frontend with advanced data visualisations and a Node.js/Express backend that serves as an intermediary between the client and NASA's services.
 
-Features
+Features:
 
 Core Functionality
 
@@ -72,7 +72,7 @@ Real-time counting effects using CountUp library
 
 Responsive grid layout
 
-Interactive Charts
+Interactive Charts:
 
 Asteroid size distribution (doughnut chart)
 
@@ -82,7 +82,7 @@ Mars camera usage statistics (bar chart)
 
 Comprehensive space data overview (radar chart)
 
-User Experience
+User Experience:
 
 Glass morphism design aesthetic
 
@@ -98,7 +98,7 @@ Loading states and error handling
 
 Technical Stack:
 
-Frontend
+Frontend:
 
 React (17.0.2) - Component-based UI library
 
