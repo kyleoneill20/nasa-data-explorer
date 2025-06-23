@@ -15,6 +15,7 @@ A full-stack web application that brings the wonders of space to your browser th
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [Licence](#licence)
+
 Overview:
 
 The NASA Data Explorer is a comprehensive web application built as part of a software engineering challenge. It demonstrates proficiency in modern web development by integrating multiple NASA APIs into an engaging user experience. The application features a React frontend with advanced data visualisations and a Node.js/Express backend that serves as an intermediary between the client and NASA's services.
