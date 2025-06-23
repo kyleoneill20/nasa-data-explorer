@@ -85,6 +85,7 @@ npm (v6.0.0 or later)
 
 Git
 Installation
+
 Clone the repository:
 ```
 git clone https://github.com/kyleoneill20/nasa-data-explorer.git
